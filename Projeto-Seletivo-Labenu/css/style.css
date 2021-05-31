@@ -1,0 +1,160 @@
+html, body{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  max-width:100vw;
+  max-height: 100vh;
+  background-color: #585e95;
+  color:white;
+  }
+
+/*Atençaõ as prporções em vh e vw para torna-lo mais responsivo*/
+/*os itens estão dispostos segundo a ordem deexibição na página. Fiz essa opção pois como tem poucos elementos e eles não se repetem achei mais fácil de localizar*/
+.container{
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas: "header"
+                       "main"
+                       "section"
+                       "footer"
+}
+
+header{
+  position: fixed;
+  grid-area: header;
+  height:8vh;
+  width:100vw;
+  margin-top: -15px;
+  background-color: #cd4d00;
+}
+
+h1{
+  position: flex;
+  text-align: center;
+  font-size: 3vh;
+  font-family: Arial, Helvetica, sans-serif;
+  padding:2vh;
+}
+
+main{
+  position: fixed;
+  grid-area: main;
+  padding-top: 7vh;
+  height: 25vh;
+  width:100vw ;
+  display: flex;
+  justify-content: center;
+}
+
+img{
+  position: relative;
+  height: clamp(10vh, 15vh , 25vh);
+  padding-top: 5vw;
+}
+
+/*as medidas em px são para estabelecer min e max*/
+section{
+  grid-area: section;
+  position: fixed;
+  text-align: center;
+  height: 30vh;
+  width:100vw; 
+  padding-top: 30vh; 
+}
+
+
+#menu ul{
+  position: absolute;
+  direction:inline;
+  height: 30vh;
+  width: 100vw;
+  padding: 1vw;
+ 
+}
+
+#menu li{
+  display: inline-block;
+  text-align: center;
+  height:20vh;
+  max-height: 100px;
+  width: 20vh;
+  min-width: 150px;
+  max-width: 150px;
+  padding-top:5vh;
+  margin: 1vh;
+  font-size: clamp(25px,150%, 80px);
+  font-family: arial;
+  font-style: italic;
+  font-weight: bolder;
+  
+  
+}
+
+.front {
+  background-color: #93c37c;
+}
+.dtscience {
+  background-color: #df6565;
+
+}
+.webfull {
+  background-color: #6c9dea;
+}
+
+/*A informação sobre a turma aparece fora visualmente, mas foi colocada dentro do footer no html, por isso está localizada depois das config. do footer*/
+footer{
+  grid-area: footer;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  justify-content: center;
+  bottom:0 ;
+  height:12vh;
+  width:100vw;
+  margin:0;
+  padding: 0 0 4vh 0;
+  background-color:#d8d8d8;
+}
+
+#turma{
+  flex-wrap: wrap;
+  display: absolute;
+  text-align: right;
+  font-size: clamp(12px,2vw,20px);
+  margin-top: -4vh;
+  margin-left: clamp(60vw, 70vw, 90vw);
+  margin-right: 1vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+
+
+#email{
+  position: relative;
+  text-align: left;
+  height:6vh ;
+  width: 90vw;
+  max-width: 400px ;
+  font-size:clamp(14px,16px,20px);
+  margin: 2vh 0 2vh 0;
+}
+
+
+button{
+  position:absolute;
+  margin: 2vh 1vh 2vh -10vh;
+  height: 7vh;
+  font-size: clamp(6px, 20px,30px);
+  min-height: 30px;
+  background-color: #cd4d00;
+  color:white;
+}
+
+/*config "p" do innerhtml, função do javascript*/
+p{
+  position: center;
+  text-align: center;
+  font-size: clamp(14px, 3vw, 20px);
+  font-family: Arial, Helvetica, sans-serif;
+
+}
